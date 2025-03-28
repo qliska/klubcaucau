@@ -156,18 +156,20 @@ nav ul li a {
 
 .membership-container {
     position: relative;
+    display: flex;
 }
 
 .membership-text {
     position: relative;
-    z-index: 1; /* Ensure text is above bubbles */
+    z-index: 1;
+    width: 50%; /* Ограничиваем только левую часть */
 }
 
 .bubbles-container {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 50%; /* Пузыри только в левой части */
     height: 100%;
     pointer-events: none;
     overflow: hidden;
@@ -176,8 +178,8 @@ nav ul li a {
 .bubble {
     position: absolute;
     bottom: -100px;
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     animation: floatBubbles 6s infinite ease-in-out;
 }
