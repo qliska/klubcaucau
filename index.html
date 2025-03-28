@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chow Chow Club</title>
+    <link rel="stylesheet" href="style.css">
+<!-- <script>
+    function openModal() {
+        document.getElementById("membershipForm").style.display = "flex";
+    }
+    function closeModal() {
+        document.getElementById("membershipForm").style.display = "none";
+    }
+    function submitForm(event) {
+        event.preventDefault();
+        alert("Formulář odeslán!");
+        closeModal();
+    }
+</script> -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logofooter.png" alt="Chow Chow Club">
+            </a>
+            <span>Chow Chow Club</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">O klubu</a></li>
+                <li><a href="#membership">Výhody</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <h1>Buďte součástí prestižního klubu s tradicí od roku 1967!</h1>
+        <button class="cta-button" onclick="openModal()">Přidejte se</button>
+    </section>
+
+
+    <div id="membershipForm">
+        <div class="modal">
+            <h2>Členství Formulář</h2>
+            <form id="form" onsubmit="submitForm(event)">
+                <input type="text" id="firstName" placeholder="Jméno" required>
+                <input type="text" id="lastName" placeholder="Příjmení" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="tel" id="phone" placeholder="Telefonní číslo" required>
+                <button type="submit">Odeslat</button>
+                <button type="button" onclick="closeModal()">Zavřít</button>
+            </form>
+        </div>
+    </div>
+
+    <section id="about" class="stats-container">
+        <div class="stats-text">
+            <h2>O klubu</h2>
+            <p>Chow Chow Club je komunita milovníků tohoto plemene...</p>
+            <a href="oklubu.html" class="button-link">Čist dal</a>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <h2>59</h2>
+                <p>členů</p>
+            </div>
+            <div class="stat">
+                <h2>100</h2>
+                <p>pejsků</p>
+            </div>
+            <div class="stat">
+                <h2>5</h2>
+                <p>Chovatelských <br> stanic</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="membership" class="membership-container">
+        <div class="membership-text">
+            <h2>Výhody členství</h2>
+            <p>Přidejte se k největší komunitě majitelů Chow Chow!</p>
+        </div>
+        <div class="benefits">
+            <div class="benefit">
+                <h3>Přístup k ověřeným informacím</h3>
+                <p>Expertní rady, články a výzkumy...</p>
+            </div>
+            <div class="benefit">
+                <h3>Silná komunita</h3>
+                <p>Podpora a sdílení zkušeností...</p>
+            </div>
+            <div class="benefit">
+                <h3>Speciální výhody</h3>
+                <p>Exkluzivní obsah pro členy...</p>
+            </div>
+            <div class="benefit">
+                <h3>Podpora chovu</h3>
+                <p>Ochrana plemene a odpovědná péče...</p>
+            </div>
+        </div>
+        <div class="bubbles-container">
+            <img src="img/logofooter.png" class="bubble" alt="Chow Chow">
+            <img src="img/logofooter.png" class="bubble" alt="Chow Chow">
+            <img src="img/logofooter.png" class="bubble" alt="Chow Chow">
+            <img src="img/logofooter.png" class="bubble" alt="Chow Chow">
+            <img src="img/logofooter.png" class="bubble" alt="Chow Chow">
+        </div>
+    </section>
+
+
+    <section class="blog-container">
+        <h2>Nejnovější články</h2>
+        <div class="blog-articles">
+            <div class="article">
+                <h3>Tipy pro péči o Chow Chow</h3>
+                <p>Jak správně pečovat o srst, výživu a zdraví vašeho pejska...</p>
+                <a href="#">Přečíst celý článek</a>
+            </div>
+            <div class="article">
+                <h3>Trénink a výchova</h3>
+                <p>Nejlepší metody výcviku pro Chow Chow...</p>
+                <a href="#">Přečíst celý článek</a>
+            </div>
+            <div class="article">
+                <h3>Zdravotní péče</h3>
+                <p>Jak udržet vašeho psa v nejlepší kondici...</p>
+                <a href="#">Přečíst celý článek</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-container">
+        <div class="footer-logo"></div>
+        <p>&copy; 2025 Chow Chow Club | Design: Alisa Horáková | Všechna práva vyhrazena.</p>
+    </footer>
+
+    <script>
+        function openModal() {
+        document.getElementById("membershipForm").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("membershipForm").style.display = "none";
+    }
+
+    function submitForm(event) {
+        event.preventDefault();
+        
+        let firstName = document.getElementById("firstName").value;
+        let lastName = document.getElementById("lastName").value;
+        let email = document.getElementById("email").value;
+        let phone = document.getElementById("phone").value;
+
+        let mailtoLink = `mailto:qliska@icloud.com?subject=Nová žádost o členství&body=Jméno: ${firstName}%0D%0APříjmení: ${lastName}%0D%0AEmail: ${email}%0D%0ATelefon: ${phone}`;
+        
+        window.location.href = mailtoLink;
+        closeModal();
+    }
+    </script>
+    
+</body>
+</html>
