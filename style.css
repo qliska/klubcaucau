@@ -165,11 +165,11 @@ nav ul li a {
     width: 50%; /* Ограничиваем только левую часть */
 }
 
-.bubbles-container {
+/* .bubbles-container {
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%; /* Пузыри только в левой части */
+    width: 50%; Пузыри только в левой части 
     height: 100%;
     pointer-events: none;
     overflow: hidden;
@@ -202,7 +202,7 @@ nav ul li a {
         transform: translateY(-120vh) scale(1);
         opacity: 0;
     }
-}
+} */
 .benefits {
     display: flex;
     flex-wrap: wrap;
@@ -232,6 +232,39 @@ nav ul li a {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 30%;
+}
+
+.blog-header {
+    background-color: #d4a373;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+.blog-header h1 {
+    margin: 0;
+    font-size: 36px;
+    text-align: center;
+}
+.blog-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px;
+    background-color: #f8f1e5;
+}
+.blog-post {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+}
+.blog-post h2 {
+    margin-top: 0;
+}
+.blog-post p {
+    margin-bottom: 15px;
 }
 
 .klub-articles {
@@ -300,4 +333,6 @@ nav ul li a {
     .footer-logo {
         display: none;
     }
+
+    
 }
